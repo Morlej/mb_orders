@@ -1,17 +1,9 @@
-#!/usr/bin/gawk -f
+#!/usr/bin/env gawk -f
 ################################################################################
 # Order Entry Benchmark 
 #
 # genstock.awk - Generate stock
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/genstock.awk,v 1.3 2002/07/09 15:13:43 morlej Exp $
 ################################################################################
 
 BEGIN { 

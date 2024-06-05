@@ -4,14 +4,6 @@
 #
 # new_order.sql - PL/SQL program to create new orders
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/tx/new_order.sql,v 1.2 2002/06/20 17:54:10 morlej Exp $
 ################################################################################
 */
 set serveroutput on size 32768

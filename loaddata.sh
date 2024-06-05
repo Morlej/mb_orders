@@ -4,14 +4,6 @@
 #
 # loadata.sh - Load all generated data
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/loaddata.sh,v 1.3 2003/10/14 11:26:59 morlej Exp $
 ################################################################################
 
 export ORACLE_SID=orders

@@ -4,14 +4,6 @@
 #
 # newOrder.java - Java program to create new orders
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/tx/newOrder.java,v 1.3 2003/09/25 13:56:08 morlej Exp $
 ################################################################################
 */
 import java.sql.*;

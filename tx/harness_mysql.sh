@@ -4,14 +4,6 @@
 #
 # harness_mysql.sh - Run benchmark 
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/tx/harness_mysql.sh,v 1.1 2003/10/14 12:14:24 morlej Exp $
 ################################################################################
 
 echo "How many OE clerks?"

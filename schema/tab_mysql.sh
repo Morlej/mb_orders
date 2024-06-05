@@ -3,14 +3,6 @@
 #--
 #-- tab_mysql.sh - Create user and database objects for benchmark
 #--
-#-- Copyright (C) 2002 Scale Abilities Ltd. 
-#-------------------------------------------------------------------------------
-#-- Who		When		What
-#-- ---		----		----
-#-- J.Morle	01-MAY-2002	Creation
-#--
-#-------------------------------------------------------------------------------
-#-- $Header: /repository/scaleabilities/bench/orders/schema/tab_mysql.sh,v 1.2 2003/09/25 13:56:08 morlej Exp $
 #-------------------------------------------------------------------------------
 
 echo "Enter root password to DROP and recreate existing orders database:"

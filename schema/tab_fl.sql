@@ -3,14 +3,6 @@
 --
 -- tab.sql - Create user and database objects for benchmark
 --
--- Copyright (C) 2002 Scale Abilities Ltd. 
---------------------------------------------------------------------------------
--- Who		When		What
--- ---		----		----
--- J.Morle	01-MAY-2002	Creation
---
---------------------------------------------------------------------------------
--- $Header: /repository/scaleabilities/bench/orders/schema/tab_fl.sql,v 1.1 2003/10/14 11:26:59 morlej Exp $
 --------------------------------------------------------------------------------
 
 create user orders identified by orders;

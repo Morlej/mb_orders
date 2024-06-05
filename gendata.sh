@@ -4,14 +4,6 @@
 #
 # gendata.sh - Call all data generation routines
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/gendata.sh,v 1.1 2002/06/20 17:54:10 morlej Exp $
 ################################################################################
 
 # How many distinct customers?
@@ -24,12 +16,18 @@ nitems=10000
 itemquant=10000
 # How many warehouses?
 warehouses=5
+# Use UUID keys?
+UUID_PK=1
 
-VARS="-v warehouses=$warehouses -v itemquant=$itemquant -v nitems=$nitems -v naddr=$naddr -v ncust=$ncust"
+VARS="-v uuid_pk=${UUID_PK} -v warehouses=$warehouses -v itemquant=$itemquant -v nitems=$nitems -v naddr=$naddr -v ncust=$ncust"
 
-set -x
-./genaddr.awk $VARS
-./gencust.awk $VARS
+mkdir gen 2>/dev/null
+
+echo "Addresses"
+./genaddr.py --uuid_pk ${UUID_PK} --naddr $naddr
+echo "Customers"
+./gencust.py --uuid_pk ${UUID_PK} --naddr $naddr --warehouses $warehouses --itemquant $itemquant --nitems $nitems --ncust $ncust
+echo "Items"
 ./genitems.awk $VARS
+echo "Stock"
 ./genstock.awk $VARS
-set +x

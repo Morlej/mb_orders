@@ -4,14 +4,6 @@
 #
 # loadata_mysql.sh - Load all generated data into mysql database
 #
-# Copyright (C) 2002 Scale Abilities Ltd. 
-################################################################################
-# Who		When		What
-# ---		----		----
-# J.Morle	01-MAY-2002	Creation
-#
-################################################################################
-# $Header: /repository/scaleabilities/bench/orders/loaddata_mysql.sh,v 1.3 2003/10/14 11:26:59 morlej Exp $
 ################################################################################
 
 
@@ -64,6 +56,6 @@ load data LOCAL INFILE 'gen/customers.gen'
 REPLACE
 INTO TABLE cust
 FIELDS TERMINATED BY ' '
-(cust_id, addr_id, forename, lastname);
+( addr_id, forename, lastname, cust_id);
 
 ENDSQL
