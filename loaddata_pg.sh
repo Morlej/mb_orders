@@ -33,4 +33,4 @@ select 'ADDRESSES', now();
 \copy addr FROM 'gen/addresses.gen' DELIMITER ' '
 
 select 'CUSTOMERS', now();
-\copy orders.cust (addr_id, forename, lastname, cust_id) FROM 'gen/customers.gen' DELIMITER ' '
+\copy orders.cust (cust_id, addr_id, forename, lastname) FROM 'gen/customers.gen' DELIMITER ' '

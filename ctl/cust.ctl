@@ -8,4 +8,4 @@ load data
 infile 'gen/customers.gen'
 into table cust
 fields terminated by ' '
-( addr_id, forename, lastname, cust_id)
+( cust_id, addr_id, forename, lastname)

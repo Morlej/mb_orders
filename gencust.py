@@ -47,7 +47,7 @@ def generate_customers(uuid_pk, warehouses, itemquant, nitems, naddr, ncust):
                 key = i
                 fk = int(random.random() * ncust)
             
-            outf.write(f"{fk} {randname(roots, 4000, num)} {randname(roots, 2000, num)} {key}\n")
+            outf.write(f"{key} {fk} {randname(roots, 4000, num)} {randname(roots, 2000, num)}\n")
 
 def main():
     parser = argparse.ArgumentParser(description="Generate customer data")

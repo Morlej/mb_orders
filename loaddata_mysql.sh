@@ -56,6 +56,6 @@ load data LOCAL INFILE 'gen/customers.gen'
 REPLACE
 INTO TABLE cust
 FIELDS TERMINATED BY ' '
-( addr_id, forename, lastname, cust_id);
+( cust_id, addr_id, forename, lastname);
 
 ENDSQL
