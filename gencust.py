@@ -25,8 +25,18 @@ def load_addresses(file_path):
     return addresses
 
 def randname(roots, card, num):
-    ret = roots[(int(num * random.random()) % card) * int(num / card)]
-    return ret if ret else "wibble"
+    if not roots:
+        return "NoValue"
+    if card > num:
+        card = num
+    
+    # Calculate the index based on the cardinality
+    index = (int(num * random.random()) % card) * int(num / card)
+    if index >= num:
+        index = num - 1  # Ensure the index is within bounds
+
+    ret = roots[index]
+    return ret if ret else "NoValue"
 
 def generate_customers(uuid_pk, warehouses, itemquant, nitems, naddr, ncust):
     if ncust == 0:
@@ -47,7 +57,7 @@ def generate_customers(uuid_pk, warehouses, itemquant, nitems, naddr, ncust):
                 key = i
                 fk = int(random.random() * ncust)
             
-            outf.write(f"{key} {fk} {randname(roots, 4000, num)} {randname(roots, 2000, num)}\n")
+            outf.write(f"{key} {fk} {randname(roots, 100, num)} {randname(roots, 200, num)}\n")
 
 def main():
     parser = argparse.ArgumentParser(description="Generate customer data")

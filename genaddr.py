@@ -17,8 +17,18 @@ def load_roots(file_path):
     return roots
 
 def randname(roots, card, num):
-    ret = roots[(int(num * random.random()) % card) * int(num / card)]
-    return ret if ret else "wibble"
+    if not roots:
+        return "NoValue"
+    if card > num:
+        card = num
+    
+    # Calculate the index based on the cardinality
+    index = (int(num * random.random()) % card) * int(num / card)
+    if index >= num:
+        index = num - 1  # Ensure the index is within bounds
+
+    ret = roots[index]
+    return ret if ret else "NoValue"
 
 def generate_addresses(uuid_pk, naddr):
     if naddr == 0:
@@ -38,10 +48,10 @@ def generate_addresses(uuid_pk, naddr):
             
             address = (
                 f"{key} {int(random.random() * 200)} "
-                f"{randname(roots, naddr, num)} "
-                f"{randname(roots, 1000, num)} "
-                f"{randname(roots, 50, num)} "
-                f"{randname(roots, 50, num)[:4]}{randname(roots, 10000, num)[:4]}"
+                f"{randname(roots, 8000, num)} "
+                f"{randname(roots, 300, num)} "
+                f"{randname(roots, 15, num)} "
+                f"{randname(roots, 15, num)[:4]}{randname(roots, 10000, num)[:4]}"
             )
             outf.write(f"{address}\n")
 
