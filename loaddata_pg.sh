@@ -34,3 +34,4 @@ select 'ADDRESSES', now();
 
 select 'CUSTOMERS', now();
 \copy orders.cust (cust_id, addr_id, forename, lastname) FROM 'gen/customers.gen' DELIMITER ' '
+ENDSQL
