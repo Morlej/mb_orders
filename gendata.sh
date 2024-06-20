@@ -28,6 +28,6 @@ echo "Addresses"
 echo "Customers"
 ./gencust.py --uuid_pk ${UUID_PK} --naddr $naddr --warehouses $warehouses --itemquant $itemquant --nitems $nitems --ncust $ncust
 echo "Items"
-./genitems.awk $VARS
+gawk -f ./genitems.awk $VARS
 echo "Stock"
-./genstock.awk $VARS
+gawk -f ./genstock.awk $VARS
